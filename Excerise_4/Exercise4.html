@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+    <link href="four.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../Exercise1.html">Exercise1</a>
+        <a href="../Excerise_2/Exercise2.html">Exercise2</a>
+        <a href="../Excerise_3/Exercise3.html">Exercise3</a>
+        <a class="active" href="Exercise4.html">Exercise4</a>
+    </div>
+    <h1></h1>
+    <div style=" width: 500px;
+    text-align: center;
+    border: 5px solid black;" class="paragraph">
+        <p>
+            Elon Reeve Musk FRS (/ˈiːlɒn/; born June 28, 1971) is an entrepreneur, investor, and business magnate.
+             He is the founder, CEO, and Chief Engineer at SpaceX; early-stage investor, CEO,
+            and Product Architect of Tesla, Inc.; founder of The Boring Company;
+            and co-founder of Neuralink and OpenAI. With an estimated net worth
+            of around US$273 billion as of April 2022,[6] Musk is the wealthiest
+            person in the world according to both the Bloomberg Billionaires
+            Index and the Forbes real-time billionaires list.[7][8]
+            Musk was born to a Canadian mother and White South African father,
+            and raised in Pretoria, South Africa. He briefly attended
+            the University of Pretoria before moving to Canada at age
+            17 to avoid conscription. He was enrolled at Queen's
+            University and transferred to the University of
+            Pennsylvania two years later, where he received
+            a bachelor's degree in economics and physics. He
+            moved to California in 1995 to attend Stanford
+            University but decided instead to pursue a
+            business career, co-founding the web softwar
+            e company Zip2 with his brother Kimbal.
+            The startup was acquired by Compaq for
+            $307 million in 1999. The same year, Musk
+            co-founded online bank X.com, which merged
+            with Confinity in 2000 to form PayPal. The
+            company was bought by eBay in 2002 for $1.5 billion.
+        </p><b>
+        </div>
+        <a href="https://en.wikipedia.org/wiki/Elon_Musk"> Source for text above </a>
+        <p>To change the the border and color of the paragraph above, input the RGB values below. </p>
+
+        <p>Background: </p>
+        <p><li>
+            <label for="red1"> Red value:</label>
+            <input type="text" placeholder="0-255" id="red1">
+        </li></p>
+        <p><li>
+            <label for="green1"> Green value:</label>
+            <input type="text" placeholder="0-255" id="green1">
+        </li></p>
+        <p><li>
+            <label for="blue1"> Blue value:</label>
+            <input type="text" placeholder="0-255" id="blue1">
+        </li></p>
+
+        <p>Border: </p>
+        <p><li>
+            <label for="w"> Width:</label>
+            <input type="text" placeholder="px" id="w">
+        </li></p>
+        <p><li>
+            <label for="red2"> Red value:</label>
+            <input type="text" placeholder="0-255" id="red2">
+        </li></p>
+        <p><li>
+            <label for="green2"> Green value:</label>
+            <input type="text" placeholder="0-255" id="green2">
+        </li></p>
+        <p><li>
+            <label for="blue2"> Blue value:</label>
+            <input type="text" placeholder="0-255" id="blue2">
+        </li></p>
+
+
+        <button id="button">Change</button>
+    </body>
+    <script>
+        let red1 = document.querySelector('#red1')
+        let green1 = document.querySelector('#green1')
+        let blue1 = document.querySelector('#blue1')
+        let w = document.querySelector('#w')
+        let red2 = document.querySelector('#red2')
+        let green2 = document.querySelector('#green2')
+        let blue2 = document.querySelector('#blue2')
+        let change = document.querySelector('#button')
+        let paragraph = document.querySelector(".paragraph")
+
+    change.addEventListener("click", () => {
+        paragraph.style.backgroundColor = 'rgb(' +red1.value + ',' + green1.value + ',' + blue1.value + ')'
+        paragraph.style.borderColor = 'rgb(' +red2.value + ',' + green2.value + ',' + blue2.value + ')'
+        paragraph.style.borderWidth = w.value + 'px'
+    })
+    </script>
+    </html>

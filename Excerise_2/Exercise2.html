@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <link href="two.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+    <div class="navbar">
+      <a href="../index.html">Home</a>
+      <a href="../Exercise1.html">Exercise1</a>
+      <a class="active" href="../Excerise_2/Exercise2.html">Exercise2</a>
+      <a href="../Excerise_3/Exercise3.html">Exercise3</a>
+      <a href="../Excerise_4/Exercise4.html">Exercise4</a>
+    </div>
+    <h1></h1>
+    <div class="slides">
+        <img src="Slideshow/1.jpg" alt="" height = "500px" width ="500px" class="slideshow"><br>
+        <button class="button" onclick = "previous()">Previous</button>
+        <button class="button" onclick = "next()">Next</button>
+        <a href="https://www.pexels.com/photo/grayscale-photo-of-city-buildings-11485306/" class="link"  target="_blank"
+        rel="noopener noreferrer">Source</a>
+    </div>
+
+    <script type="text/javascript">
+      var changer = document.querySelector('.slideshow');
+      var sourceC = document.querySelector('.link');
+      console.log(sourceC.getAttribute("href"));
+      var pictures = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'];
+      var sources = ["https://www.pexels.com/photo/grayscale-photo-of-city-buildings-11485306/",
+      "https://www.pexels.com/photo/aerial-photo-of-city-from-a-window-2777594/",
+      "https://www.pexels.com/photo/aerial-view-of-city-buildings-424184/",
+      "https://www.pexels.com/photo/aerial-view-of-buildings-near-ocean-2816858/",
+      "https://www.pexels.com/photo/city-lights-on-street-1838002/"
+      ]
+
+      var i = 0;
+      function previous()
+      {
+        if(i==0)
+        {
+          i = 4;
+        }
+        else
+        {
+          i--;
+        }
+        sourceChange();
+        return change();
+      }
+
+      function next()
+      {
+        if(i == 4)
+        {
+          i = 0;
+        }
+        else
+        {
+          i++;
+        }
+        sourceChange();
+        return change();
+      }
+
+      function change()
+      {
+        return changer.setAttribute('src', "Slideshow/" + pictures[i]);
+
+      }
+      function sourceChange()
+      {
+        return sourceC.setAttribute("href", sources[i]);
+      }
+    </script>
+</body>
+</html>
